@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{69CD09A1-E1A3-05E6-C9C7-89C84C5A0BE7}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyCtrl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CharaAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerCtrl.cs" Line="36" Column="1" />
+      <File FileName="Assets/Scripts/DropItem.cs" Line="28" Column="34" />
+      <File FileName="Assets/Scripts/CharacterStatus.cs" Line="37" Column="43" />
+      <File FileName="Assets/Scripts/SearchArea.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/EnemyCtrl.cs" Line="219" Column="1" />
+      <File FileName="Assets/Scripts/CharacterMove.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AttackArea.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameRuleCtrl.cs" Line="46" Column="1" />
+      <File FileName="Assets/Scripts/TargetCursor.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
