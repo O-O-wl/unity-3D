@@ -4,8 +4,9 @@ using System.Collections;
 
 public class AttackArea : MonoBehaviour {
 	CharacterStatus status;
-	
-	void Start()
+    Color[] colors = { new Color(1, 0, 0), new Color(0, 0, 1) };
+
+    void Start()
 	{
 		status = transform.root.GetComponent<CharacterStatus>();
 	}
@@ -43,7 +44,8 @@ public class AttackArea : MonoBehaviour {
 	void OnAttack()
 	{
 		GetComponent<Collider>().enabled = true;
-	}
+        //GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0);
+    }
 	
 	
 	// 공격 판정을 무효로 한다.

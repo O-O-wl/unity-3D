@@ -1,0 +1,2 @@
+/Users/ldcpaul/Downloads/3학년2학기/게임프로그래밍/workspace/GAME3D/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/ldcpaul/Downloads/3학년2학기/게임프로그래밍/workspace/GAME3D/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

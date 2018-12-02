@@ -5,6 +5,7 @@ public class InputManager : MonoBehaviour {
 	Vector2 slideStartPosition;
 	Vector2 prevPosition;
 	Vector2 delta = Vector2.zero;
+
 	bool moved = false;
 	
 	void Update()
@@ -32,12 +33,18 @@ public class InputManager : MonoBehaviour {
 		
 		// 커서 위치를 갱신한다.
 		prevPosition = GetCursorPosition();
+
+
+        // 수정
+     
+
+
 	}
 	
 	// 클릭되었는가.
 	public bool Clicked()
 	{
-		if (!moved && Input.GetButtonUp("Fire1"))
+        if (!moved && Input.GetButtonUp("Fire1")&&!Input.GetKey(KeyCode.R))
 			return true;
 		else
 			return false;

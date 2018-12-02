@@ -77,7 +77,10 @@ public class PlayerCtrl : MonoBehaviour
     void WalkStart()
     {
         StateStartCommon();
+
     }
+
+    //--test
 
     void Walking()
     {
@@ -117,6 +120,47 @@ public class PlayerCtrl : MonoBehaviour
             }
         }
     }
+    //----
+
+    /*
+    void Walking()
+    {
+        if (inputManager.Clicked())
+        {
+            // RayCast로 대상물을 조사한다.
+            Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("EnemyHit"))))
+            {
+                // 지면이 클릭되었다.
+                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    SendMessage("SetDestination", hitInfo.point);
+                    targetCursor.SetPosition(hitInfo.point);
+                }
+                // 적이 클릭되었다.
+                if (hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("EnemyHit"))
+                {
+                    // 수평 거리를 체크해서 공격할지 결정한다.
+                    Vector3 hitPoint = hitInfo.point;
+                    hitPoint.y = transform.position.y;
+                    float distance = Vector3.Distance(hitPoint, transform.position);
+                    if (distance < attackRange)
+                    {
+                        // 공격.
+                        attackTarget = hitInfo.collider.transform;
+                        targetCursor.SetPosition(attackTarget.position);
+                        ChangeState(State.Attacking);
+                    }
+                    else
+                    {
+                        SendMessage("SetDestination", hitInfo.point);
+                        targetCursor.SetPosition(hitInfo.point);
+                    }
+                }
+            }
+        }
+    }*/
 
     // 공격 스테이트가 시작되기 전에 호출된다.
     void AttackStart()

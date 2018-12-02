@@ -6,6 +6,8 @@ public class DropItem : MonoBehaviour {
 	{
 		Attack,
 		Heal,
+        bamsongi,
+        Key,
 	};
 	public ItemKind kind;
 	
@@ -23,7 +25,7 @@ public class DropItem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Vector3 velocity = Random.insideUnitSphere * 2.0f + Vector3.up * 8.0f;
+		Vector3 velocity = Random.insideUnitSphere * 2.0f + Vector3.up * 10.0f;
 		
         GetComponent<Rigidbody>().velocity = velocity;
 	}

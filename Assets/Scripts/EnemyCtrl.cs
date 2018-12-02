@@ -175,13 +175,14 @@ public class EnemyCtrl : MonoBehaviour
     {
         if (dropItemPrefab.Length == 0) { return; }
         GameObject dropItem = dropItemPrefab[Random.Range(0, dropItemPrefab.Length)];
-        Instantiate(dropItem, transform.position, Quaternion.identity);
+        Instantiate(dropItem,new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
     }
 
     void Died()
     {
         status.died = true;
         dropItem();
+        GameObject.Find("UIManager").GetComponent<StageManager>().enemyCount++;
         Destroy(gameObject);
         if (gameObject.tag == "Boss")
         {

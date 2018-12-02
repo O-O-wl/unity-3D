@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6196cdb2ee2b4f74a8968a134781e8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgTexture: {fileID: 2800000, guid: 55437608bc9c747158e594778d18beb8, type: 3}
+  bgTexture: {fileID: 2800000, guid: b89b2cf32961a4ae8842abdb192f7e97, type: 3}
 --- !u!4 &1358119786
 Transform:
   m_ObjectHideFlags: 0

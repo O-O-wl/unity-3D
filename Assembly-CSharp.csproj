@@ -61,8 +61,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlanetShader\Script\Planet.cs" />
+    <Compile Include="Assets\PlanetShader\Script\ShadowManager.cs" />
+    <Compile Include="Assets\PlanetShader\Script\Tools\FpsDisplay.cs" />
+    <Compile Include="Assets\PlanetShader\Script\Tools\FreeCamera.cs" />
+    <Compile Include="Assets\PlanetShader\Script\Tools\RotatingCamera.cs" />
+    <Compile Include="Assets\PlanetShader\Script\Tools\SceneManager.cs" />
+    <Compile Include="Assets\PlanetShader\Script\Tools\ShowOffSceneManager.cs" />
+    <Compile Include="Assets\ProtoPack\Scripts\OpenAnimTest.cs" />
+    <Compile Include="Assets\ProtoPack\Scripts\PlatformLiftTest.cs" />
+    <Compile Include="Assets\ProtoPack\Scripts\PlayerJumpTest.cs" />
+    <Compile Include="Assets\ProtoPack\Scripts\RotateScript.cs" />
+    <Compile Include="Assets\ProtoPack\Scripts\SlimeMoveTest.cs" />
+    <Compile Include="Assets\Scripts\arrowController.cs" />
+    <Compile Include="Assets\Scripts\arrowZoom.cs" />
     <Compile Include="Assets\Scripts\AttackArea.cs" />
     <Compile Include="Assets\Scripts\AttackAreaActivator.cs" />
+    <Compile Include="Assets\Scripts\BamsongiController.cs" />
+    <Compile Include="Assets\Scripts\BamsongiGenerator.cs" />
+    <Compile Include="Assets\Scripts\BoxController.cs" />
     <Compile Include="Assets\Scripts\CharaAnimation.cs" />
     <Compile Include="Assets\Scripts\CharacterMove.cs" />
     <Compile Include="Assets\Scripts\CharacterStatus.cs" />
@@ -78,8 +95,20 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\SearchArea.cs" />
+    <Compile Include="Assets\Scripts\SlimeController.cs" />
+    <Compile Include="Assets\Scripts\SnowController.cs" />
+    <Compile Include="Assets\Scripts\SnowGenerator.cs" />
+    <Compile Include="Assets\Scripts\StageManager.cs" />
     <Compile Include="Assets\Scripts\TargetCursor.cs" />
     <Compile Include="Assets\Scripts\TitleSceneCtrl.cs" />
+    <None Include="Assets\PlanetShader\Shader\PlanetRings.shader" />
+    <None Include="Assets\Tiny Trees All Season\Readme.txt" />
+    <None Include="Assets\PlanetShader\Shader\Planet.shader" />
+    <None Include="Assets\GreatswordofFrozenNight\SpecLightDiffuse.shader" />
+    <None Include="Assets\3D Assets\Terrain\WinterTree\license.txt" />
+    <None Include="Assets\PlanetShader\Shader\PlanetShared.cginc" />
+    <None Include="Assets\FreeWeapons\Read_me.txt" />
+    <None Include="Assets\Tiny Trees All Season\Update.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/ldcpaul/Downloads/3학년2학기/게임프로그래밍/workspace/GAME3D/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

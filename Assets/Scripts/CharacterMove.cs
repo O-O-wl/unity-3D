@@ -20,7 +20,7 @@ public class CharacterMove : MonoBehaviour {
 	bool forceRotate = false;
 	
 	// 강제로 향하게 하고 싶은 방향.
-	Vector3 forceRotateDirection;
+    public Vector3 forceRotateDirection;
 	
 	// 목적지.
 	public Vector3 destination; 

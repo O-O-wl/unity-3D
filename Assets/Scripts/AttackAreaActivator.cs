@@ -3,8 +3,9 @@ using System.Collections;
 
 public class AttackAreaActivator : MonoBehaviour {
 	Collider[] attackAreaColliders; // 공격 판정 컬라이더 배열.
-	
+   
 	void Start () {
+
 		// 자식 오브젝트에서 AttackArea 스크립트가 추가된 오브젝트를 찾는다.
 		AttackArea[] attackAreas = GetComponentsInChildren<AttackArea>();
 		attackAreaColliders = new Collider[attackAreas.Length];
@@ -21,7 +22,8 @@ public class AttackAreaActivator : MonoBehaviour {
 	{
 		foreach (Collider attackAreaCollider in attackAreaColliders)
 			attackAreaCollider.enabled = true;
-	}
+      
+    }
 	
 	// 애니메이션 이벤트의 EndAttackHit로 컬라이더를 무효로 한다.
 	void EndAttackHit()

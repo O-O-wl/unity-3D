@@ -11,7 +11,7 @@ public class CharacterStatus : MonoBehaviour
 
     // 공격력.
     public int Power = 10;
-
+    public bool haveKey = false;
     // 마지막에 공격한 대상.
     public GameObject lastAttackTarget = null;
 
@@ -29,28 +29,61 @@ public class CharacterStatus : MonoBehaviour
     // 공격력 강화 시간.
     float powerBoostTime = 0.0f;
 
-    // 아이템 획득. 
+
+    // 공격력 강화 효과.
+    ParticleSystem powerUpEffect;
+
+    // 아이템 획득.
     public void GetItem(DropItem.ItemKind itemKind)
     {
         switch (itemKind)
         {
             case DropItem.ItemKind.Attack:
-                powerBoostTime = 5.0f;
+                powerBoostTime = 20.0f;
+                powerUpEffect.Play();
                 break;
             case DropItem.ItemKind.Heal:
                 // MaxHP의 절반 회복.
                 HP = Mathf.Min(HP + MaxHP / 2, MaxHP);
                 break;
+            case DropItem.ItemKind.bamsongi:
+                GameObject.Find("Main Camera").GetComponent<FollowCamera>().getItem = true;
+                break;
+            case DropItem.ItemKind.Key:
+                haveKey = true;
+                break;
+        }
+    }
+
+    void Start()
+    {
+        if (gameObject.tag == "Player")
+        {
+            powerUpEffect = transform.Find("PowerUpEffect").GetComponent<ParticleSystem>();
         }
     }
 
     void Update()
     {
+
+       
+        if (gameObject.tag != "Player")
+        {
+            return;
+        }
         powerBoost = false;
         if (powerBoostTime > 0.0f)
         {
             powerBoost = true;
+            Power = 50;
+            transform.localScale=new Vector3(1.3f, 1.3f, 1.3f);
             powerBoostTime = Mathf.Max(powerBoostTime - Time.deltaTime, 0.0f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            Power = 10;
+            powerUpEffect.Stop();
         }
     }
 
