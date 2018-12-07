@@ -67,11 +67,13 @@ public class FollowCamera : MonoBehaviour
     public Transform lookTarget;
     public Vector3 offset = Vector3.zero;
     public Vector3 initLoc;
- //   public GameObject bamsongi;
+    //   public GameObject bamsongi;
     InputManager inputManager;
+    // public Vector3 initV;
 
     void Start()
     {
+
         getItem = false;
         initLoc = transform.position;
         inputManager = FindObjectOfType<InputManager>();
@@ -80,6 +82,8 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+
+
         // 드래그 입력으로 카메라 회전각을 갱신한다.
         if (inputManager.Moved())
         {
@@ -89,6 +93,17 @@ public class FollowCamera : MonoBehaviour
             horizontalAngle = Mathf.Repeat(horizontalAngle, 360.0f);
             verticalAngle -= delta.y * anglePerPixel;
             verticalAngle = Mathf.Clamp(verticalAngle, -60.0f, 60.0f);
+        }
+        if (lookTarget.GetComponent<CharacterStatus>().trans)
+        {
+            if (Input.GetKey(KeyCode.Q))
+            {
+                horizontalAngle -= 8;
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                horizontalAngle += 8;
+            }
         }
 
         // 카메라의 위치와 회전각을 갱신한다.
@@ -109,23 +124,34 @@ public class FollowCamera : MonoBehaviour
             if (Physics.Linecast(lookPosition, transform.position, out hitInfo, 1 << LayerMask.NameToLayer("Ground")))
                 transform.position = hitInfo.point;
         }
+    
+
+        
         if (Input.GetKey(KeyCode.R))
         {
             transform.position = new Vector3(lookTarget.transform.position.x, lookTarget.transform.position.y+2, lookTarget.transform.position.z);
-
-            if (Input.GetMouseButtonDown(0)&& getItem)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
-                RaycastHit hitInfo;
-                if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("EnemyHit"))))
+            /*if(lookTarget.GetComponent<CharacterStatus>().trans){
+                if (Input.GetMouseButtonDown(0))
                 {
+                    lookTarget.FindChild("").GetComponent<Animator>().SetBool("Fire", true);
+                    Ray ray = Camera.main.ScreenPointToRay(inputManager.GetCursorPosition());
+                    RaycastHit hitInfo;
+                    if (Physics.Raycast(ray, out hitInfo, RayCastMaxDistance, (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("EnemyHit"))))
+                    {
 
-                    GameObject.Find("BamsongiGenerator").GetComponent<BamsongiGenerator>().setTarget(hitInfo.point);
-                    GameObject.Find("BamsongiGenerator").GetComponent<BamsongiGenerator>().shoot();
+                        GameObject.Find("bulletGenerater").GetComponent<BamsongiGenerator>().setTarget(hitInfo.point);
+                        GameObject.Find("bulletGenerater").GetComponent<BamsongiGenerator>().shoot();
+                    }
                 }
-            }
+            }*/
         }
+       
     }
+
+    private void Update()
+{
+
+}
 }
 
 

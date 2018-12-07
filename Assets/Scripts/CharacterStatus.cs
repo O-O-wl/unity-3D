@@ -8,7 +8,8 @@ public class CharacterStatus : MonoBehaviour
     // 체력.
     public int HP = 100;
     public int MaxHP = 100;
-
+    public bool trans = false;
+    public int MaxPower=10;
     // 공격력.
     public int Power = 10;
     public bool haveKey = false;
@@ -23,6 +24,7 @@ public class CharacterStatus : MonoBehaviour
     // 상태.
     public bool attacking = false;
     public bool died = false;
+ 
 
     // 공격력 강화.
     public bool powerBoost = false;
@@ -65,8 +67,8 @@ public class CharacterStatus : MonoBehaviour
 
     void Update()
     {
+        Power = Random.Range(MaxPower / 2, MaxPower);
 
-       
         if (gameObject.tag != "Player")
         {
             return;
@@ -75,14 +77,14 @@ public class CharacterStatus : MonoBehaviour
         if (powerBoostTime > 0.0f)
         {
             powerBoost = true;
-            Power = 50;
-            transform.localScale=new Vector3(1.3f, 1.3f, 1.3f);
+            Power = Random.Range(25, 50);
+        //    transform.localScale=new Vector3(1.3f, 1.3f, 1.3f);
             powerBoostTime = Mathf.Max(powerBoostTime - Time.deltaTime, 0.0f);
         }
         else
         {
             transform.localScale = new Vector3(1, 1, 1);
-            Power = 10;
+            Power = Random.Range(MaxPower / 2, MaxPower);
             powerUpEffect.Stop();
         }
     }

@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114523173478730010}
   m_Layer: 12
   m_Name: Ring
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1864953406821802}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 44, y: 0.3, z: -62}
+  m_LocalPosition: {x: 44, y: 1, z: -62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4846936257483174}
@@ -144,7 +144,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   MaxHP: 100
-  Power: 10
+  trans: 0
+  MaxPower: 10
+  Power: 15
+  haveKey: 0
   lastAttackTarget: {fileID: 0}
   characterName: SmlieAttack
   attacking: 0

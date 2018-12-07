@@ -12,6 +12,7 @@ public class PlayerCtrl : MonoBehaviour
     GameRuleCtrl gameRuleCtrl;
     public GameObject hitEffect;
     TargetCursor targetCursor;
+    public Quaternion initLOC;
 
     // 스테이트 종류.
     enum State
@@ -28,6 +29,7 @@ public class PlayerCtrl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        initLOC = transform.rotation;
         status = GetComponent<CharacterStatus>();
         charaAnimation = GetComponent<CharaAnimation>();
         inputManager = FindObjectOfType<InputManager>();
@@ -39,6 +41,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!status.trans){
         switch (state)
         {
             case State.Walking:
@@ -66,7 +69,7 @@ public class PlayerCtrl : MonoBehaviour
             }
         }
     }
-
+    }
 
     // 스테이트를 변경한다.
     void ChangeState(State nextState)

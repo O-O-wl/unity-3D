@@ -40,7 +40,7 @@ public class CharaAnimation : MonoBehaviour
 	{
 		Vector3 delta_position = transform.position - prePosition;
 		animator.SetFloat("Speed", delta_position.magnitude / Time.deltaTime);
-		
+      
 		if(attacked && !status.attacking)
 		{
 			attacked = false;

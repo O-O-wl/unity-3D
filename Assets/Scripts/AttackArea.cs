@@ -33,10 +33,15 @@ public class AttackArea : MonoBehaviour {
 	// 맞았다.
 	void OnTriggerEnter(Collider other)
 	{
-		// 공격 당한 상대의 Damage 메시지를 보낸다.
-		other.SendMessage("Damage",GetAttackInfo());
-		// 공격한 대상을 저장한다.
-		status.lastAttackTarget = other.transform.root.gameObject;
+        // 공격 당한 상대의 Damage 메시지를 보낸다.
+        if (other.tag != "Skill"&other.tag != "EnemyAttack" & other.tag != "PlayerAttack" & other.tag != "fireball" & other.tag != "bamsongi")
+        {
+            Debug.Log("kkkk");
+            other.SendMessage("Damage", GetAttackInfo());
+          // other.SendMessage("DamageText", GetAttackInfo().attackPower);
+            // 공격한 대상을 저장한다.
+            status.lastAttackTarget = other.transform.root.gameObject;
+        }
 	}
 	
 	

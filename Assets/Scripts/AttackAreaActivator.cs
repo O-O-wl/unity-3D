@@ -31,4 +31,6 @@ public class AttackAreaActivator : MonoBehaviour {
 		foreach (Collider attackAreaCollider in attackAreaColliders)
 			attackAreaCollider.enabled = false;
 	}
+
+   
 }

@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Enemy
   - Boss
+  - fireball
+  - Skill
+  - bamsongi
+  - Fireball
+  - EnemyAttack
+  - PlayerAttack
+  - hat
+  - Gunner
+  - Before
   layers:
   - Default
   - TransparentFX

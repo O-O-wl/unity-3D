@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class InputManager : MonoBehaviour {
@@ -44,7 +45,7 @@ public class InputManager : MonoBehaviour {
 	// 클릭되었는가.
 	public bool Clicked()
 	{
-        if (!moved && Input.GetButtonUp("Fire1")&&!Input.GetKey(KeyCode.R))
+        if (!moved && Input.GetButtonUp("Fire1") &&!EventSystem.current.IsPointerOverGameObject())
 			return true;
 		else
 			return false;
@@ -66,4 +67,8 @@ public class InputManager : MonoBehaviour {
 	{
 		return Input.mousePosition;
 	}
+
+    public void buttonDown(){
+
+    }
 }
