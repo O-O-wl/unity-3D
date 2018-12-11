@@ -12,6 +12,10 @@ public class ChangeChar : MonoBehaviour {
     GameObject Player;
     GameObject Cameraa;
     TargetCursor targetCursor;
+    ParticleSystem changeEffect;
+    bool effect = false;
+    float effectDelta=0;
+    float effectSpan = 0.8f;
     // Use this for initialization
     void Start () {
         Shield01 = GameObject.Find("Shield01");
@@ -22,13 +26,28 @@ public class ChangeChar : MonoBehaviour {
         Gunner.active = false;
         Player = GameObject.Find("Player");
         status = GetComponent<CharacterStatus>();
+        changeEffect = GameObject.Find("ChangeEffect").GetComponent<ParticleSystem>();
         Cameraa=GameObject.Find("Main Camera");
         targetCursor = FindObjectOfType<TargetCursor>();
+
     }
     
     // Update is called once per frame
     void Update () {
-        if(Input.GetKeyDown(KeyCode.Alpha3)){
+        if(effect){
+            effectDelta += Time.deltaTime;
+            if(effectDelta>effectSpan){
+                effectDelta = 0;
+                effect = false;
+            }
+        }
+        else{
+            changeEffect.Stop();
+        }
+        changeEffect.Stop();
+        if (Input.GetKeyDown(KeyCode.Alpha3)){
+            effect = true;
+            changeEffect.Play();
             status.trans = true;
             Sword1.active = false;
             Shield01.active = false;
@@ -40,6 +59,7 @@ public class ChangeChar : MonoBehaviour {
             Player.GetComponent<GunnerController>().enabled = true;
             Player.GetComponent<CharacterMove>().destination = Player.transform.position;
             Player.transform.rotation = Player.GetComponent<PlayerCtrl>().initLOC;
+
            /*
             Cameraa.transform.SetParent(Player.transform);
             Cameraa.transform.position = new Vector3(-0.1f, 4, -11);
@@ -50,6 +70,8 @@ public class ChangeChar : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            effect = true;
+            changeEffect.Play();
             status.trans = false;
             Sword1.active = true;
             Shield01.active = true;

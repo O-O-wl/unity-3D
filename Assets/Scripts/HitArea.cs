@@ -3,12 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 public class HitArea : MonoBehaviour {
     public GameObject DamageTextGenerator;
+    GameObject player;
     private void Start()
     {
+        player = GameObject.Find("Player");
         DamageTextGenerator = GameObject.Find("DamageTextGenerator");
     }
     void Damage(AttackArea.AttackInfo attackInfo)
 	{
+        if (transform.root.tag != "Player") { player.GetComponent<CharacterStatus>().lastAttackTarget = transform.root.gameObject; }
 		transform.root.SendMessage ("Damage",attackInfo);
         //GameObject damageText = Instantiate(this.DamageText) as GameObject;
         // damageText.GetComponent("TextMeshPro").SendMessage("");
