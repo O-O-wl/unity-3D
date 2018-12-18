@@ -1,50 +1,53 @@
 ﻿<Properties StartupConfiguration="{69CD09A1-E1A3-05E6-C9C7-89C84C5A0BE7}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HitArea.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/portalController.cs">
     <Files>
       <File FileName="Assets/Scripts/AttackAreaActivator.cs" Line="1" Column="1" />
       <File FileName="Assets/ProtoPack/Scripts/SlimeMoveTest.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TitleSceneCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TitleSceneCtrl.cs" Line="29" Column="1" />
       <File FileName="Assets/Scripts/InputManager.cs" Line="48" Column="49" />
       <File FileName="Assets/Scripts/CharacterStatusGui.cs" Line="14" Column="23" />
       <File FileName="Assets/Scripts/GameResultGui.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameTimerGui.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/FollowCamera.cs" Line="140" Column="15" />
-      <File FileName="Assets/Scripts/EnemyGeneratorCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CharacterStatus.cs" Line="88" Column="26" />
+      <File FileName="Assets/Scripts/FollowCamera.cs" Line="169" Column="1" />
+      <File FileName="Assets/Scripts/EnemyGeneratorCtrl.cs" Line="11" Column="4" />
+      <File FileName="Assets/Scripts/CharacterStatus.cs" Line="94" Column="14" />
       <File FileName="Assets/Scripts/arrowController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SnowController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SnowGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SnowGenerator.cs" Line="19" Column="1" />
       <File FileName="Assets/Scripts/arrowZoom.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/StageManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BamsongiController.cs" Line="19" Column="51" />
+      <File FileName="Assets/Scripts/BamsongiController.cs" Line="12" Column="28" />
       <File FileName="Assets/Scripts/BamsongiGenerator.cs" Line="30" Column="60" />
       <File FileName="Assets/Scripts/SlimeController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/BoxController.cs" Line="1" Column="1" />
       <File FileName="Assets/ProtoPack/Scripts/OpenAnimTest.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DragonAttack.cs" Line="33" Column="35" />
+      <File FileName="Assets/Scripts/DragonAttack.cs" Line="11" Column="29" />
       <File FileName="Assets/Scripts/SkillController.cs" Line="41" Column="14" />
       <File FileName="../../../../fight (1)/Assets/Scripts/SearchArea.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SkillPrefabController.cs" Line="37" Column="10" />
-      <File FileName="Assets/Scripts/EnemyCtrl.cs" Line="220" Column="1" />
+      <File FileName="Assets/Scripts/EnemyCtrl.cs" Line="166" Column="1" />
       <File FileName="Assets/Scripts/AttackArea.cs" Line="41" Column="13" />
       <File FileName="Assets/Scripts/SearchArea.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/CharacterMove.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerCtrl.cs" Line="195" Column="5" />
       <File FileName="Assets/Scripts/GameRuleCtrl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/TargetCursor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CharaAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CharaAnimation.cs" Line="6" Column="17" />
       <File FileName="Assets/Scripts/HitArea.cs" Line="14" Column="132" />
       <File FileName="Assets/Scripts/Skill2Controller.cs" Line="52" Column="10" />
       <File FileName="Assets/Scripts/SkillGUIController.cs" Line="29" Column="20" />
-      <File FileName="Assets/Scripts/SkillController2.cs" Line="40" Column="26" />
-      <File FileName="Assets/Yurowm/Demo/Scripts/Actions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SkillController2.cs" Line="24" Column="21" />
       <File FileName="Assets/Scripts/ChangeChar.cs" Line="29" Column="34" />
-      <File FileName="Assets/Scripts/PlayerControllerer.cs" Line="42" Column="8" />
-      <File FileName="Assets/Scripts/FollowCam.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GunnerController.cs" Line="46" Column="41" />
+      <File FileName="Assets/Scripts/PlayerControllerer.cs" Line="14" Column="4" />
+      <File FileName="Assets/Scripts/FollowCam.cs" Line="12" Column="1" />
+      <File FileName="Assets/Scripts/GunnerController.cs" Line="22" Column="6" />
       <File FileName="Assets/Scripts/GunnerSkills.cs" Line="8" Column="28" />
       <File FileName="Assets/Scripts/TextController.cs" Line="19" Column="2" />
+      <File FileName="Assets/Scripts/Warp.cs" Line="21" Column="90" />
+      <File FileName="Assets/Scripts/portalController.cs" Line="13" Column="25" />
+      <File FileName="Assets/Scripts/StageManager.cs" Line="55" Column="10" />
+      <File FileName="Assets/Scripts/flashController.cs" Line="26" Column="27" />
+      <File FileName="Assets/Scripts/SceneDirector.cs" Line="13" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

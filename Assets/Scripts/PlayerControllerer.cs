@@ -26,16 +26,19 @@ public class PlayerControllerer : MonoBehaviour
     public float moveSpeed = 10.0f;
     public float rotSpeed = 100.0f;
     Vector3 moveDir;
-    GameObject Cam;
+   GameObject Cam;
     GameObject x1;
     GameObject x2;
     float reloadTime=0.2f;
     float reloadDelta;
-
+    CharacterStatus status;
+    bool isDown=false;
     Vector3 preLoc;
     // Use this for initialization
     void Start()
+   
     {
+        status = GetComponent<CharacterStatus>();
         reloadDelta = 0;
         Cam = GameObject.Find("Main Camera");
       //  x1 = GameObject.Find("x1");
@@ -52,6 +55,11 @@ public class PlayerControllerer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(status.HP<=0&&!isDown){
+            isDown = true;
+            animator.SetTrigger("Down");
+        }
+     
 //        Vector3 target = x1.transform.position- x2.transform.position;
        
         if (GetComponent<CharacterStatus>().trans)

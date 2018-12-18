@@ -8,14 +8,24 @@ public class StageManager : MonoBehaviour {
     public int stage;
     public GameObject stageBackground;
     public GameObject stageUI;
+    public GameObject Player;
+    public GameObject portal;
+    public GameObject portal2;
+    public GameObject CAMeRA;
     public float stageChangeDelta;
     bool changeStage;
     GameObject enemyCountUI;
-	// Use thisint for initialization
-	void Start () {
+    bool portalFocus = false; 
+    float focusDelta = 0;
+    float focusSpan = 2;
+    // Use thisint for initialization
+    void Start () {
         changeStage = true;
+        CAMeRA = GameObject.Find("Main Camera");
         enemyCount = 0;
+        Player = GameObject.Find("Player");
         stage = 1;
+       
         enemyCountUI = GameObject.Find("EnemyKillCount");
         stageChangeDelta = 0;
         stageUI = GameObject.Find("Stage");
@@ -23,12 +33,38 @@ public class StageManager : MonoBehaviour {
         // GameObject.Find("EnemyGenerator").GetComponent<EnemyGeneratorCtrl>().setEnemyWarg();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    private void LateUpdate()
+    {
+        if (portalFocus)
+        {
+            //    CAMeRA.GetComponent<Transform>().position=new Vector3
+            focusDelta += Time.deltaTime;
+            CAMeRA.transform.position = new Vector3(40, 10, -35);
+            if (focusSpan < focusDelta)
+            {
+                CAMeRA.GetComponent<FollowCamera>().lookTarget = Player.transform;
+                CAMeRA.transform.position = CAMeRA.GetComponent<FollowCamera>().initLoc;
+                portalFocus = false;
+            }
+        }
+    }
+    // Update is called once per frame
+    void Update () {
+
         if (stage == 3)
         {
             enemyCountUI.GetComponent<Text>().text = enemyCount + "/1";
+            if(enemyCount==1){
+                GameObject portal= Instantiate(this.portal) as GameObject;
+                GameObject portal2= Instantiate(this.portal2) as GameObject;
+                portal.transform.position = new Vector3(44, 0.5f, -10);
+                portal2.transform.position = new Vector3(-39, 0.5f, -25);
+                portalFocus = true;
+                CAMeRA.GetComponent<FollowCamera>().lookTarget =portal.transform;
+               
+                enemyCount++;
+
+            }
         }
         else
         {

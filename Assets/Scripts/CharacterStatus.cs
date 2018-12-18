@@ -25,7 +25,7 @@ public class CharacterStatus : MonoBehaviour
     public bool attacking = false;
     public bool died = false;
  
-
+    public float end=0;
     // 공격력 강화.
     public bool powerBoost = false;
     // 공격력 강화 시간.
@@ -86,6 +86,12 @@ public class CharacterStatus : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             Power = Random.Range(MaxPower / 2, MaxPower);
             powerUpEffect.Stop();
+        }
+        if((HP<=0&(transform.root.tag=="Player"))|| (HP <= 0 & (transform.root.tag == "Boss"))){
+            end += Time.deltaTime;if (end > 1.5)
+            {
+                Application.LoadLevel("TitleScene");
+            }
         }
     }
 

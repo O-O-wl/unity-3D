@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\EnemyCtrl.cs" />
     <Compile Include="Assets\Scripts\EnemyGeneratorCtrl.cs" />
     <Compile Include="Assets\Scripts\fireballController.cs" />
+    <Compile Include="Assets\Scripts\flashController.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\GameResultGui.cs" />
@@ -109,6 +110,8 @@
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerer.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\Scripts\portalController.cs" />
+    <Compile Include="Assets\Scripts\SceneDirector.cs" />
     <Compile Include="Assets\Scripts\SearchArea.cs" />
     <Compile Include="Assets\Scripts\Skill2Controller.cs" />
     <Compile Include="Assets\Scripts\SkillController.cs" />
@@ -122,6 +125,7 @@
     <Compile Include="Assets\Scripts\TargetCursor.cs" />
     <Compile Include="Assets\Scripts\TextController.cs" />
     <Compile Include="Assets\Scripts\TitleSceneCtrl.cs" />
+    <Compile Include="Assets\Scripts\Warp.cs" />
     <Compile Include="Assets\Yurowm\Demo\Scripts\Actions.cs" />
     <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterPanel.cs" />
     <Compile Include="Assets\Yurowm\Demo\Scripts\CharacterViewer.cs" />
@@ -129,9 +133,11 @@
     <None Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
     <None Include="Assets\PlanetShader\Shader\PlanetRings.shader" />
     <None Include="Assets\FightingUnityChan_FreeAsset\FightingUnityChan_FreeAsset\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Flying_Tree\Materials\Leafs.shader" />
     <None Include="Assets\_Creepy_Cat\3D Games Effects Pack Free\Example_02\Help Readme SOS.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Medieval Bridge\Shaders\Double sided.shader" />
     <None Include="Assets\Tiny Trees All Season\Readme.txt" />
     <None Include="Assets\PlanetShader\Shader\Planet.shader" />
     <None Include="Assets\Fantasy Monster(wizard) Demo\READ ME(wizard)\character setup guide link.txt" />
@@ -381,6 +387,12 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Editor">
+      <HintPath>/Users/ldcpaul/Downloads/3학년2학기/게임프로그래밍/workspace/GAME3D/Assets/Plugins/Octane/Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Runtime">
+      <HintPath>/Users/ldcpaul/Downloads/3학년2학기/게임프로그래밍/workspace/GAME3D/Assets/Plugins/Octane/Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/ldcpaul/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95357892113259292}
   - component: {fileID: 114814325236098114}
   - component: {fileID: 122997980829953072}
+  - component: {fileID: 65484916585416350}
   m_Layer: 0
   m_Name: Snowflake
   m_TagString: Untagged
@@ -37,9 +38,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584529461680442}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 53.065018, y: 10, z: -40}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -40.645157, y: 0.29030895, z: -40.794147}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -86,6 +87,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584529461680442}
   m_Mesh: {fileID: 4300000, guid: 6f6065c42255df54aa6c774a833d34c5, type: 3}
+--- !u!65 &65484916585416350
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1584529461680442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2067256, y: 0.2469591, z: 2.903089}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95357892113259292
 Animator:
   serializedVersion: 3
@@ -110,7 +123,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584529461680442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ef2d4edc31f5479590a48bb8967b196, type: 3}
   m_Name: 

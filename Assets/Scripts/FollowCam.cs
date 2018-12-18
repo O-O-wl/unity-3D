@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowCam : MonoBehaviour {
     public Transform targetTr;
-    public float distance = 10.0f;
+    public float distance = 15.0f;
     public float height = 3.0f;
     public float dampTrace = 20.0f;
 

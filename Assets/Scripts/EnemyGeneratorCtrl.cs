@@ -8,7 +8,9 @@ public class EnemyGeneratorCtrl : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject enemyPrefabSkeleton;
     public GameObject enemyPrefabDragon;
+   
     GameObject stageEnemy;
+    
     float StageDelta;
 
     // 적을 저장한다. 

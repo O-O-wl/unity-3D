@@ -59,8 +59,11 @@ public class FollowCamera : MonoBehaviour
 {
     public bool getItem;
     Vector3 lookPosition;
+    bool onBoss = false;
     const float RayCastMaxDistance = 100.0f;
     public float distance = 5.0f;
+     float delta = 0;
+    float span = 11f;
     public float horizontalAngle = 0.0f;
     public float rotAngle = 180.0f; // 화면 가로폭만큼 커서를 이동시켰을 때 몇 도 회전하는가.
     public float verticalAngle = 10.0f;
@@ -69,6 +72,7 @@ public class FollowCamera : MonoBehaviour
     public Vector3 initLoc;
     //   public GameObject bamsongi;
     InputManager inputManager;
+
     // public Vector3 initV;
 
     void Start()
@@ -82,8 +86,7 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-
-
+     
         // 드래그 입력으로 카메라 회전각을 갱신한다.
         if (inputManager.Moved())
         {
@@ -145,14 +148,29 @@ public class FollowCamera : MonoBehaviour
                 }
             }*/
         }
-       
+        if (onBoss)
+        {
+            delta += Time.deltaTime;
+            transform.position = new Vector3(transform.position.x + Random.RandomRange(-1, 1), transform.position.y + Random.RandomRange(-1, 1), transform.position.z + Random.RandomRange(-1, 1));
+            if (delta > span) { onBoss = false; }
+
+
+        }
+
     }
 
     private void Update()
 {
 
 }
+
+    public void BossStage(){
+        onBoss = true;
+
+
+    }
 }
+
 
 
 
