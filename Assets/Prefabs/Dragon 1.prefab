@@ -1646,6 +1646,7 @@ MonoBehaviour:
   characterName: Dragon
   attacking: 0
   died: 0
+  end: 0
   powerBoost: 0
 --- !u!114 &114190528290987292
 MonoBehaviour:

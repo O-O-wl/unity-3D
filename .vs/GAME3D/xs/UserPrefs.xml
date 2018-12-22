@@ -44,7 +44,7 @@
       <File FileName="Assets/Scripts/GunnerSkills.cs" Line="8" Column="28" />
       <File FileName="Assets/Scripts/TextController.cs" Line="19" Column="2" />
       <File FileName="Assets/Scripts/Warp.cs" Line="21" Column="90" />
-      <File FileName="Assets/Scripts/portalController.cs" Line="13" Column="25" />
+      <File FileName="Assets/Scripts/portalController.cs" Line="12" Column="11" />
       <File FileName="Assets/Scripts/StageManager.cs" Line="55" Column="10" />
       <File FileName="Assets/Scripts/flashController.cs" Line="26" Column="27" />
       <File FileName="Assets/Scripts/SceneDirector.cs" Line="13" Column="11" />

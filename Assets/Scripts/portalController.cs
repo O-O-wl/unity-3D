@@ -9,8 +9,8 @@ public class portalController : MonoBehaviour
     float destroySpan = 10;
     public GameObject golemPrefab;
     public bool onBoss = false;
-    bool goShaqe = false;
-    bool oneTime = true;
+   public bool goShaqe = false;
+   public bool oneTime = true;
     GameObject golem;
     // Use this for initialization
     void Start()
